@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .container {
+            position: relative;
+            border: 3px solid #6AC5AC;
+        }
+        .box {
+            border: 3px solid #6AC5AC;
+            float: left;
+            width: 200px;
+            height: 100px;
+            margin: 1em;
+        }
+        .after-box {
+            clear: left;
+        }
+        nav {
+            border: 3px solid #D64078;
+            box-sizing: border-box;;
+        }
+        section {
+            border: 3px solid #FDC72F;
+            position: relative;
+            overflow: auto;
+            zoom: 1;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 70px;
+            background: white;
+            width: 100%;
+            text-align: center;
+            border: 3px solid #96C02E;
+        }
+        body {
+            margin-bottom: 150px;
+        }
+        img {
+            float: right;
+            width: 50%;
+        }
+
+        .boxx {
+            float: left;
+            width: 200px;
+            height: 100px;
+            margin: 1em;
+            border: 3px solid #6AC5AC;
+        }
+        .after-boxx {
+            clear: left;
+            margin-left: 1em;
+            border: 3px solid #FDC72F;
+        }
+
+        .boxxx {
+            display: inline-block;
+            width: 200px;
+            height: 100px;
+            margin: 1em;
+            border: 3px solid #6AC5AC;
+        }
+        @media screen and (min-width: 600px) {
+            nav {
+                float: left;
+                width: 25%;
+            }
+            section {
+                margin-left: 25%;
+            }
+        }
+        @media screen and (max-width: 599px) {
+            nav li {
+                display: inline;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">I feel like I am floating.</div>
+        <div class="after-box"></div>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Taco Menu</li>
+                <li>Draft list</li>
+                <li>Hours</li>
+                <li>Directions</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+
+        <section>
+            The margin-left style for sections makes sure there is room for the nav. Otherwise the absolute and static elements would overlap
+        </section>
+
+        <section>
+            <img src="http://learnlayout.com/images/ilta.png" alt="">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet totam cupiditate, ullam autem, sequi commodi omnis. Magni maxime iste illum voluptatum, doloribus sunt porro qui suscipit repellendus dolor sit omnis.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet totam cupiditate, ullam autem, sequi commodi omnis. Magni maxime iste illum voluptatum, doloribus sunt porro qui suscipit repellendus dolor sit omnis.
+        </section>
+
+        <section>
+            Notice what happens when you resize your browser. It works nicely!
+        </section>
+
+        <div class="boxx">I'm floating</div>
+        <div class="boxx">I'm floating</div>
+        <div class="boxx">I'm floating</div>
+        <div class="boxx">I'm floating</div>
+        <div class="boxx">I'm floating</div>
+        <div class="boxx">I'm floating</div>
+        <div class="boxx">I'm floating</div>
+        <div class="boxx">I'm floating</div>
+        <div class="after-boxx">I am using clear so I don't float next to the above boxes.</div>
+
+        <div class="boxxx">I am inline block</div>
+        <div class="boxxx">I am inline block</div>
+        <div class="boxxx">I am inline block</div>
+        <div class="boxxx">I am inline block</div>
+        <div class="boxxx">I am inline block</div>
+        <div class="boxxx">I am inline block</div>
+        <div class="boxxx">I am inline block</div>
+        <div class="after-boxx">Inline block doesn't have to use clear in this case.</div>
+
+    </div>
+
+    <footer>
+        If you use a fixed header or footer, make sure there is room for it. I put a margin-bottom on the body.
+    </footer>
+</body>
+</html>
